@@ -74,4 +74,9 @@ public class NotesDataSource {
         // Ajouter vos setters
         return notes;
     }
+    public void deleteNote(long id) {
+        System.out.println("Suppression des notes avec l'ID : " + id);
+        database.delete(MySQLiteHelper.TABLE_NAME, MySQLiteHelper.COLUMN_ID
+                + " = " + id, null);
+    }
 }
